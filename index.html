@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andinet Asmamaw Enquobahrie, PhD, MBA — AI-Native Solutions | Life Sciences, Healthcare & MedTech</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a2e;
+  --ink-light: #3d3d5c;
+  --ink-muted: #6b6b8d;
+  --accent: #2d5a7b;
+  --accent-light: #3a7ca5;
+  --accent-glow: #e8f1f8;
+  --warm: #c4956a;
+  --warm-light: #f5efe8;
+  --bg: #fafaf8;
+  --white: #ffffff;
+  --border: #e5e5e0;
+  --border-light: #f0f0ec;
+  --section-gap: 6rem;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Navigation ─── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250,250,248,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.nav-name {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 0.25rem; }
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+.nav-links a:hover { color: var(--accent); background: var(--accent-glow); }
+
+.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.hamburger span { display: block; width: 20px; height: 2px; background: var(--ink); margin: 4px 0; transition: 0.3s; border-radius: 2px; }
+
+/* ─── Hero ─── */
+.hero {
+  padding: 10rem 2rem 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+.hero-portrait {
+  flex-shrink: 0;
+  width: 260px;
+  margin-top: 0.5rem;
+}
+.hero-portrait img {
+  width: 100%;
+  border-radius: 16px;
+  border: 3px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+.hero-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+.hero-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.hero-tag::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+}
+.hero-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink-light);
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--accent);
+  font-weight: 600;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--ink-light);
+  max-width: 640px;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.stat { text-align: left; }
+.stat-num {
+  font-family: 'Source Serif 4', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-top: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Section base ─── */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem var(--section-gap);
+}
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.section-label::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--accent);
+}
+.section-title {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+.section-desc {
+  font-size: 1rem;
+  color: var(--ink-light);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+}
+
+/* ─── Divider ─── */
+.divider {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.divider hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin-bottom: var(--section-gap);
+}
+
+/* ─── About / Narrative Flow ─── */
+.narrative-flow {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+.narrative-flow p {
+  font-size: 1rem;
+  color: var(--ink-light);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.narrative-flow p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ─── Quote / Mission banner ─── */
+.mission-banner {
+  background: var(--ink);
+  color: var(--white);
+  padding: 3.5rem 2rem;
+  margin: 0 0 var(--section-gap);
+  text-align: center;
+}
+.mission-banner blockquote {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 auto;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+/* ─── Perspective Banner ─── */
+.perspective-banner {
+  background: linear-gradient(135deg, var(--accent) 0%, #1a3a5c 100%);
+  color: var(--white);
+  padding: 3.5rem 2rem;
+  margin: 0 0 var(--section-gap);
+}
+.perspective-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.perspective-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+.perspective-text {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.75;
+  font-weight: 300;
+}
+.perspective-text strong {
+  font-weight: 600;
+  color: #e8f1f8;
+}
+
+/* ─── Challenge Grid (Why Life Sciences) ─── */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.challenge-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.challenge-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(45,90,123,0.08);
+}
+.challenge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.challenge-icon.regulatory { background: #fce7f3; color: #db2777; }
+.challenge-icon.safety { background: #fee2e2; color: #dc2626; }
+.challenge-icon.systems { background: #fef3c7; color: #d97706; }
+.challenge-icon.model { background: #dbeafe; color: #2563eb; }
+.challenge-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.challenge-card p {
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+
+/* ─── Capability Grid ─── */
+.capability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.capability-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.capability-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(45,90,123,0.08);
+}
+.capability-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-glow);
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+.capability-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+}
+.capability-card p {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+.capability-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.capability-tags span {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Timeline ─── */
+.timeline { position: relative; padding-left: 2.5rem; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  background: var(--bg);
+  z-index: 1;
+}
+.timeline-item.current::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+.timeline-role {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.timeline-org {
+  font-size: 0.88rem;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+.timeline-dates {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.6rem;
+}
+.timeline-desc {
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+.timeline-highlights {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.timeline-highlights span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: var(--accent-glow);
+  color: var(--accent);
+}
+
+/* ─── Projects Grid ─── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(45,90,123,0.08);
+}
+.project-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.project-icon.agent { background: #ede9fe; color: #7c3aed; }
+.project-icon.cloud { background: #dbeafe; color: #2563eb; }
+.project-icon.medical { background: #fce7f3; color: #db2777; }
+.project-icon.rag { background: #d1fae5; color: #059669; }
+.project-icon.platform { background: #fef3c7; color: #d97706; }
+.project-icon.oss { background: #e0e7ff; color: #4f46e5; }
+
+.project-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.project-card .project-sub {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.8rem;
+}
+.project-card p {
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+.tech-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.tech-tags span {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  background: var(--border-light);
+  color: var(--ink-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ─── Research / Grants ─── */
+.grants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.grant-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.grant-card .grant-agency {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.grant-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+.grant-card .grant-role {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+.grant-card p {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  line-height: 1.65;
+}
+.grant-status {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 0.6rem;
+}
+.grant-status.active { background: #d1fae5; color: #059669; }
+.grant-status.completed { background: var(--border-light); color: var(--ink-muted); }
+
+/* ─── Publications ─── */
+.pub-categories {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.pub-cat-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pub-cat-btn:hover, .pub-cat-btn.active {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+.pub-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.pub-stat-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.pub-stat-card .stat-num {
+  font-family: 'Source Serif 4', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.pub-stat-card .stat-label {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+.pub-list { list-style: none; }
+.pub-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.65;
+}
+.pub-list li:last-child { border-bottom: none; }
+.pub-list .pub-title { font-weight: 600; color: var(--ink); }
+.pub-list .pub-venue { color: var(--ink-muted); font-style: italic; }
+.pub-list .pub-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+
+/* ─── Talks ─── */
+.talks-list { list-style: none; }
+.talks-list li {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border-light);
+  align-items: start;
+}
+.talks-list li:last-child { border-bottom: none; }
+.talk-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  padding-top: 0.15rem;
+}
+.talk-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.talk-venue {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+.talk-type {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.12rem 0.45rem;
+  border-radius: 3px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+/* ─── Education ─── */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.edu-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.edu-card .edu-degree {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+.edu-card .edu-school {
+  font-size: 0.88rem;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+.edu-card .edu-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+.edu-card .edu-focus {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+}
+
+/* ─── Skills / Certifications ─── */
+.certs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+.cert-badge {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--ink-light);
+}
+
+/* ─── Blog links ─── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+.blog-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  display: block;
+}
+.blog-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(45,90,123,0.08);
+}
+.blog-card .blog-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.5rem;
+}
+.blog-card h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.blog-card p {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+
+/* ─── Contact / Footer ─── */
+.contact-section {
+  background: var(--ink);
+  color: var(--white);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact-section h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.contact-section p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.contact-links a:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+
+footer {
+  background: var(--ink);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+footer p {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ─── Collapsible sections ─── */
+.collapsible-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  user-select: none;
+}
+.collapsible-header h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.collapsible-header .toggle-icon {
+  font-size: 1.2rem;
+  color: var(--ink-muted);
+  transition: transform 0.3s;
+}
+.collapsible-header.open .toggle-icon { transform: rotate(45deg); }
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.collapsible-content.open { max-height: 8000px; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .nav-links { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--bg); flex-direction: column; padding: 1rem; border-bottom: 1px solid var(--border); }
+  .nav-links.open { display: flex; }
+  .hamburger { display: block; }
+  .hero { padding: 8rem 1.5rem 3rem; flex-direction: column-reverse; gap: 2rem; }
+  .hero-portrait { width: 180px; }
+  .hero-stats { gap: 2rem; }
+  .hero-name { font-size: 1.8rem; }
+  .challenge-grid { grid-template-columns: 1fr; }
+  .capability-grid { grid-template-columns: 1fr; }
+  .grants-grid { grid-template-columns: 1fr; }
+  .pub-summary { grid-template-columns: repeat(2, 1fr); }
+  .talks-list li { grid-template-columns: 1fr; gap: 0.3rem; }
+  .edu-grid { grid-template-columns: 1fr; }
+  section { padding: 0 1.5rem var(--section-gap); }
+  :root { --section-gap: 4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-name">A. A. Enquobahrie</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks</a>
+      <a href="#writing">Writing</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-name">Andinet Asmamaw Enquobahrie</div>
+    <div class="hero-tag">PhD, MBA · He/Him</div>
+    <div class="hero-title">AI-Native Solutions Architect | Engineering <em>Multi-Agentic Systems</em> &amp; <em>AI-Driven Transformation</em> | Life Sciences, Healthcare &amp; MedTech</div>
+    <p class="hero-sub">More than twenty years ago I started building computer vision algorithms to detect lung cancer in CT scans. That work pulled me deep into AI/ML engineering, medical imaging, and eventually into leading teams that ship production software in one of the hardest domains there is: healthcare, life sciences, and medtech.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years in AI & Software Engineering</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">90+</div>
+        <div class="stat-label">Publications & Papers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$25M+</div>
+        <div class="stat-label">Research Grants Won (PI)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">25+</div>
+        <div class="stat-label">Engineers Led</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <img src="Employee Portrait - Andinet Enquobahrie.jpg" alt="Andinet Asmamaw Enquobahrie">
+  </div>
+</header>
+
+<!-- Mission Banner -->
+<div class="mission-banner">
+  <blockquote>"What shipping production AI in regulated, safety-critical environments teaches you is that the hard part is never the model. It's the infrastructure, the evaluation rigor, the governance, the observability, and the ability to work across engineering, clinical, and business teams simultaneously."</blockquote>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="section-title">One Career. One Mission.</div>
+  <div class="section-desc">Building production-grade AI systems in high-stakes, regulated domains — from the operating room to the enterprise.</div>
+
+  <div class="narrative-flow">
+    <p>More than twenty years ago I started building computer vision algorithms to detect lung cancer in CT scans. That work pulled me deep into AI/ML engineering, medical imaging, and eventually into leading teams that ship production software in one of the hardest domains there is: healthcare, life sciences, and medtech.</p>
+
+    <p>Along the way I've architected cloud-native ML platforms, built RAG pipelines and multi-agent workflows, led GPU-accelerated inference deployments on AWS, and taken products through FDA 510(k) clearance. Before moving to enterprise, I spent nearly two decades as a Principal Investigator leading multidisciplinary R&amp;D teams across computer vision, medical imaging, and clinical AI — work that taught me how to bridge the gap between research ambition and production reality.</p>
+
+    <p>What shipping production AI in regulated, safety-critical environments teaches you is that the hard part is never the model. It's the infrastructure, the evaluation rigor, the governance, the observability, and the ability to work across engineering, clinical, and business teams simultaneously. Most AI initiatives stall because they treat these as afterthoughts.</p>
+
+    <p>That's exactly the problem I'm now focused on at enterprise scale. I work with large organizations to move AI out of the experiment phase and into their actual operating model. Designing agent architectures with retrieval, orchestration, routing, and observability built in from day one. Building abstraction layers across AI providers so teams aren't locked into a single vendor. Rethinking workflows from first principles around what AI makes possible, rather than wrapping AI around processes that were designed for a pre-AI world.</p>
+  </div>
+
+
+</section>
+
+<!-- Perspective Callout -->
+<div class="perspective-banner">
+  <div class="perspective-inner">
+    <div class="perspective-label">Perspective</div>
+    <p class="perspective-text">Most AI initiatives stall because they treat infrastructure, evaluation rigor, governance, and observability as afterthoughts. I've spent my career learning — the hard way, in operating rooms and clinical workflows — that these are the <strong>actual product</strong>.</p>
+  </div>
+</div>
+
+<!-- Why Life Sciences AI Is Different -->
+<section id="why-lifesci">
+  <div class="section-label">Industry Context</div>
+  <div class="section-title">Why Life Sciences AI Is Different</div>
+  <div class="section-desc">Life sciences companies face a unique intersection of pressures that make AI both more valuable — and far harder to deploy — than in any other sector.</div>
+
+  <div class="challenge-grid">
+    <div class="challenge-card">
+      <div class="challenge-icon regulatory">R</div>
+      <h4>Regulatory Burden Is Existential</h4>
+      <p>HIPAA, FDA 21 CFR Part 11, GxP, EU AI Act, IEC 62304, ISO 14971. A single audit failure can halt production or delay a drug launch by years. Compliance isn't a checkbox — it's the operating environment.</p>
+    </div>
+    <div class="challenge-card">
+      <div class="challenge-icon safety">S</div>
+      <h4>Patient Safety Is Non-Negotiable</h4>
+      <p>Unlike e-commerce, an operations failure in life sciences means compromised drug quality, delayed trials, or direct patient harm. Models that degrade silently in production aren't a data science problem — they're a patient safety problem.</p>
+    </div>
+    <div class="challenge-card">
+      <div class="challenge-icon systems">F</div>
+      <h4>Fragmented Systems Everywhere</h4>
+      <p>EHR, PACS, LIMS, QMS, EDMS, MES — often multiple instances per site with inconsistent data architectures. Decades of acquisitions and site-by-site decisions mean no two environments look alike.</p>
+    </div>
+    <div class="challenge-card">
+      <div class="challenge-icon model">M</div>
+      <h4>The Hard Part Is Never the Model</h4>
+      <p>It's the infrastructure, the evaluation rigor, the governance, the observability, and the ability to work across engineering, clinical, and business teams simultaneously. This is what separates production AI from demos.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- What I Bring to Life Sciences AI -->
+<section id="capabilities">
+  <div class="section-label">Capabilities</div>
+  <div class="section-title">What I Bring to Life Sciences AI</div>
+  <div class="section-desc">Two decades of building production AI in regulated environments — now applied at enterprise scale.</div>
+
+  <div class="capability-grid">
+    <div class="capability-card">
+      <div class="capability-num">01</div>
+      <h4>Medical Imaging AI &amp; SaMD Operations</h4>
+      <p>Clinical AI deployment pipelines, DICOM/FHIR integration, continuous model performance monitoring, drift detection, and regulatory-compliant model update workflows. IEC 62304 and FDA PCCP aligned.</p>
+      <div class="capability-tags">
+        <span>MLOps</span><span>DICOM</span><span>FHIR</span><span>IEC 62304</span><span>FDA PCCP</span>
+      </div>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">02</div>
+      <h4>AI Governance for Regulated Environments</h4>
+      <p>Extending GAMP 5 validation frameworks for AI systems. Risk-based classification aligned to EU AI Act and FDA guidance. Change management protocols for when a prompt update requires revalidation vs. documentation-only.</p>
+      <div class="capability-tags">
+        <span>GxP Validation</span><span>EU AI Act</span><span>ISO 42001</span><span>GAMP 5</span>
+      </div>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">03</div>
+      <h4>RAG &amp; Multi-Agent Systems for Healthcare</h4>
+      <p>Regulatory knowledge bases indexed on submission history. RAG pipelines for clinical decision support with source citations. Multi-agent workflows for clinical trial operations, pharmacovigilance, and regulatory intelligence.</p>
+      <div class="capability-tags">
+        <span>RAG Pipelines</span><span>Multi-Agent</span><span>LLM Orchestration</span><span>Clinical AI</span>
+      </div>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">04</div>
+      <h4>Cloud-Native AI Platforms</h4>
+      <p>GPU-accelerated inference on AWS, containerized deployment pipelines, platform-agnostic architecture. Abstraction layers across AI providers so teams aren't locked into a single vendor's roadmap.</p>
+      <div class="capability-tags">
+        <span>AWS</span><span>Kubernetes</span><span>GPU Inference</span><span>Multi-Model</span>
+      </div>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">05</div>
+      <h4>AI-Native Software Delivery for GxP</h4>
+      <p>AI-assisted requirements generation, automated validation documentation, compliance pre-screening on every PR. Moving from periodic audit scrambles to continuously maintained compliance posture.</p>
+      <div class="capability-tags">
+        <span>GxP SDLC</span><span>Validation Automation</span><span>21 CFR Part 11</span>
+      </div>
+    </div>
+    <div class="capability-card">
+      <div class="capability-num">06</div>
+      <h4>Regulatory Submission &amp; Documentation</h4>
+      <p>Direct experience with FDA 510(k) clearance. RAG-powered regulatory knowledge systems, submission document generation, and regulatory intelligence monitoring across FDA, EU MDR, and ICH frameworks.</p>
+      <div class="capability-tags">
+        <span>510(k)</span><span>EU MDR</span><span>eCTD</span><span>ISO 13485</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Career Journey Timeline -->
+<section id="journey">
+  <div class="section-label">Career Journey</div>
+  <div class="section-title">Two Decades of Building What Matters</div>
+  <div class="section-desc">From R&D engineer to senior director — a progression defined by increasing scope, impact, and technical leadership.</div>
+
+  <div class="timeline">
+
+    <div class="timeline-item current">
+      <div class="timeline-role">AI-Native Solutions Architect — Life Sciences, Healthcare &amp; MedTech</div>
+      <div class="timeline-org">Accenture</div>
+      <div class="timeline-dates">2025 – Present</div>
+      <div class="timeline-desc">Designing AI-native transformation for life sciences, healthcare, and medtech organizations. Building deterministic-first, governance-embedded agentic AI systems for regulated environments — from medical imaging MLOps and SaMD operations to GxP software delivery, regulatory submission automation, and AI governance frameworks. Bringing 20 years of clinical AI experience to enterprise scale.</div>
+      <div class="timeline-highlights">
+        <span>AI-Native Transformation</span><span>Life Sciences</span><span>GxP / Regulatory</span><span>Medical Imaging MLOps</span><span>Multi-Agent Systems</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-role">Senior Director, Medical Computing</div>
+      <div class="timeline-org">Kitware Inc. — Carrboro, NC</div>
+      <div class="timeline-dates">Jan 2023 – 2025</div>
+      <div class="timeline-desc">Led a high-performing R&D team across computer vision, AI, medical imaging, and cloud computing. Drove 47% increase in contract value and doubled the commercial client base. Built HeartSight AI (autonomous AI-guided ultrasound), MedExRAG (RAG-based X-ray interpretation), VAMAS (cloud SaaS for medical imaging), VolView Insight, and X-ray Genius. Cultivated partnerships leading to FDA 510(k) approval.</div>
+      <div class="timeline-highlights">
+        <span>RAG Pipelines</span><span>Autonomous AI</span><span>Cloud Platforms</span><span>NVIDIA Clara</span><span>ARPA-H</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-role">Director, Medical Computing</div>
+      <div class="timeline-org">Kitware Inc. — Carrboro, NC</div>
+      <div class="timeline-dates">May 2017 – Dec 2022</div>
+      <div class="timeline-desc">Led team of 25+ engineers and researchers. Established IEC 62304 regulatory-compliant development processes supporting FDA 510(k) approvals. Launched Pulse Physiology Engine. Built nSurgSim (surgical planning), KBVTrainer (virtual biopsy simulator), and ML-driven EHR data analysis for trauma care optimization.</div>
+      <div class="timeline-highlights">
+        <span>Team Leadership</span><span>Regulatory (IEC 62304)</span><span>Surgical Simulation</span><span>ML/EHR</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-role">Assistant Director, Medical Computing</div>
+      <div class="timeline-org">Kitware Inc. — Carrboro, NC</div>
+      <div class="timeline-dates">Jan 2013 – May 2017</div>
+      <div class="timeline-desc">Launched new R&D initiatives in surgical simulation. Developed AI-powered craniosynostosis surgery planning tool achieving 40-50% reduction in malformations (p&lt;0.001). Led PET/CT pocket phantom development with &lt;1% error. Supported regulatory and commercialization strategies for medical device companies.</div>
+      <div class="timeline-highlights">
+        <span>R&D Strategy</span><span>Surgical Planning AI</span><span>Commercialization</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-role">Technical Lead</div>
+      <div class="timeline-org">Kitware Inc. — Carrboro, NC</div>
+      <div class="timeline-dates">Jan 2009 – Jan 2013</div>
+      <div class="timeline-desc">Led development of advanced medical imaging algorithms for segmentation, registration, and visualization. Built augmented reality display for robot-assisted prostate surgery (1.0mm FLE). Designed PET/CT fusion algorithms for liver biopsy guidance (1.72mm RMSE).</div>
+      <div class="timeline-highlights">
+        <span>Augmented Reality</span><span>Image Analysis</span><span>Robotic Surgery</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-role">Research & Development Engineer</div>
+      <div class="timeline-org">Kitware Inc. — Clifton Park, NY</div>
+      <div class="timeline-dates">Jan 2005 – Jan 2009</div>
+      <div class="timeline-desc">Led the Image-Guided Surgery Toolkit (IGSTK) — an open-source platform adopted by research labs and medical device companies worldwide. Won the Tibbetts Award (2011). Provided consulting for neurosurgery, orthopedic, and robotic surgical applications.</div>
+      <div class="timeline-highlights">
+        <span>IGSTK</span><span>Open Source</span><span>Tibbetts Award</span><span>Surgical Guidance</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-role">Graduate Research Assistant</div>
+      <div class="timeline-org">Cornell University — Ithaca, NY</div>
+      <div class="timeline-dates">2000 – 2005</div>
+      <div class="timeline-desc">Developed automated lung cancer detection from CT scans — 94% sensitivity, 5.5 FP/case. Contributed to the International Early Lung Cancer Action Program (IELCAP). Published at RSNA and leading imaging conferences.</div>
+      <div class="timeline-highlights">
+        <span>Computer-Aided Detection</span><span>PhD Research</span><span>Lung Cancer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="section-label">Selected Projects</div>
+  <div class="section-title">Systems I've Built</div>
+  <div class="section-desc">Production AI systems spanning autonomous diagnostics, retrieval-augmented generation, cloud-native platforms, and surgical planning.</div>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-icon agent">🤖</div>
+      <h4>HeartSight AI</h4>
+      <div class="project-sub">ARPA-H · 2024–2027 · Principal Investigator</div>
+      <p>Autonomous AI-guided ultrasound system for neonatal congenital heart disease screening. Integrates mechatronic robotics, embedded firmware (ESP32), mobile diagnostics, and deep learning–based image interpretation. A compound agentic system with autonomous decision-making, sensor integration, and real-time inference.</p>
+      <div class="tech-tags">
+        <span>PyTorch</span><span>Embedded AI</span><span>Robotics</span><span>ESP32</span><span>Deep Learning</span><span>Mobile</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon rag">📚</div>
+      <h4>MedExRAG</h4>
+      <div class="project-sub">Evidence-Based AI for Radiology</div>
+      <p>Retrieval-augmented generation system for X-ray interpretation using Qwen2-VL multimodal vision-language model. Full agentic pipeline with PubMedBERT embeddings, ChromaDB semantic search, DocLing OCR parsing, LangChain/LangGraph orchestration, and GPU-enabled Docker deployment with Prometheus/Grafana observability.</p>
+      <div class="tech-tags">
+        <span>RAG</span><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>Qwen2-VL</span><span>Prometheus</span><span>Grafana</span><span>Docker</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon cloud">☁️</div>
+      <h4>VAMAS</h4>
+      <div class="project-sub">Cloud-Native Medical Imaging Platform</div>
+      <p>Scalable SaaS platform for medical imaging visualization, AI model deployment, and remote inference. Deployed cloud-native infrastructure on AWS with Docker containerization and Terraform infrastructure-as-code.</p>
+      <div class="tech-tags">
+        <span>AWS</span><span>Docker</span><span>Terraform</span><span>SaaS</span><span>REST APIs</span><span>AI Inference</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon platform">🔬</div>
+      <h4>VolView Insight</h4>
+      <div class="project-sub">Multimodal Clinical AI Platform</div>
+      <p>Integrated open-source radiology viewer with SMART-on-FHIR patient data and a modular Python AI backend for multimodal clinical analysis. Plug-in APIs for deep learning models, real-time VTK.js overlays, and secure medical LLM calls with EHR and imaging context.</p>
+      <div class="tech-tags">
+        <span>SMART-on-FHIR</span><span>Python</span><span>VTK.js</span><span>LLMs</span><span>REST</span><span>WebSocket</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon platform">🧠</div>
+      <h4>VolView + NVIDIA Clara</h4>
+      <div class="project-sub">Presented at NVIDIA GTC 2025</div>
+      <p>Browser-native pipeline integrating NVIDIA Clara open models (Reason, Segment, Generate) into VolView via REST/WebSocket AI services. Real-time GPU-accelerated 3D AI model inference for interactive conversational image exploration, organ segmentation, and synthetic image generation.</p>
+      <div class="tech-tags">
+        <span>NVIDIA Clara</span><span>MONAI</span><span>GPU Inference</span><span>WebSocket</span><span>3D Visualization</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon medical">🫁</div>
+      <h4>X-ray Genius</h4>
+      <div class="project-sub">Open Source · Synthetic Medical Imaging</div>
+      <p>AI platform for synthesizing orthopedic X-ray images (DRRs from CT scans) for surgical planning, AI data augmentation, and pathology research. End-to-end MLOps pipeline with MONAI/PyTorch deployed on AWS.</p>
+      <div class="tech-tags">
+        <span>MONAI</span><span>PyTorch</span><span>AWS</span><span>MLOps</span><span>Open Source</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon medical">🏥</div>
+      <h4>nSurgSim</h4>
+      <div class="project-sub">NIH-funded · Surgical Planning</div>
+      <p>Advanced virtual surgical planning tool for nasal airway obstruction. Integrated 3D image processing, cloud-based model deployment, airflow simulation, and user-centric customization. Earned 3.48/5 usability from ENT surgeons.</p>
+      <div class="tech-tags">
+        <span>3D Slicer</span><span>CFD Simulation</span><span>Cloud</span><span>Clinical Validation</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon oss">📖</div>
+      <h4>IGSTK</h4>
+      <div class="project-sub">Tibbetts Award Winner · 2005–2013</div>
+      <p>Open-source Image-Guided Surgery Toolkit adopted by research labs and medical device companies worldwide for prototyping and commercializing image-guided surgical applications. Co-authored "IGSTK: The Book."</p>
+      <div class="tech-tags">
+        <span>C++</span><span>Open Source</span><span>ITK/VTK</span><span>Surgical Navigation</span><span>FDA</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon medical">👶</div>
+      <h4>Craniosynostosis Surgery Planning</h4>
+      <div class="project-sub">NIH STTR Phase I & II · PI</div>
+      <p>AI-powered surgical planning system (iCSPlan) using 3D statistical shape models to optimize skull correction in children. Achieved 40–50% reduction in cranial malformations (p&lt;0.001) across surgeries.</p>
+      <div class="tech-tags">
+        <span>Shape Models</span><span>3D Slicer</span><span>Image Registration</span><span>Clinical Trials</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon agent">🎮</div>
+      <h4>KBVTrainer & Surgical Simulators</h4>
+      <div class="project-sub">NIH R43/R44 · Multiple Projects</div>
+      <p>Suite of virtual surgical trainers for renal biopsy (>4.4/5 effectiveness), laparoscopic surgery (FLS credentialing), neurosurgery, and orthognathic surgery. Open-source simulation frameworks (iMSTK, Pulse Physiology Engine).</p>
+      <div class="tech-tags">
+        <span>VR/Haptics</span><span>Physics Simulation</span><span>iMSTK</span><span>Pulse Engine</span><span>Open Source</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Research Grants -->
+<section id="research">
+  <div class="section-label">Research Portfolio</div>
+  <div class="section-title">$25M+ in Funded Research</div>
+  <div class="section-desc">Principal Investigator on NIH and ARPA-H grants spanning autonomous AI systems, medical imaging, surgical simulation, and anatomical modeling.</div>
+
+  <div class="grants-grid">
+
+    <div class="grant-card">
+      <div class="grant-status active">Active</div>
+      <div class="grant-agency">ARPA-H · 2024–2027</div>
+      <h4>AI-Enhanced Compact Ultrasound for Autonomous Newborn Heart Monitoring</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Developing a mechatronic ultrasound device with AI algorithms to autonomously guide scanning, interpret images, and diagnose congenital heart disease in newborns.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status active">Active</div>
+      <div class="grant-agency">ARPA-H · 2024–2029</div>
+      <h4>Precision Surgical Imaging: Non-contact, Multi-scale Photoacoustic Imaging</h4>
+      <div class="grant-role">Subcontractor PI</div>
+      <p>End-to-end precision surgical imaging platform for autonomous characterization of surgical margins and 3D rendering of critical anatomical structures during surgery.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status active">Active</div>
+      <div class="grant-agency">NIH R01 · 2021–2026</div>
+      <h4>Guiding Humans to Create Better-Labeled Datasets for ML in Biomedical Research</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Developing methodology and open-source software for active learning, cross-institute ML model generalization, and scalable cloud-based data labeling platforms.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status active">Active</div>
+      <div class="grant-agency">NIH R01 · 2021–2026</div>
+      <h4>Surgical Simulator for Improving Skill Proficiency and Resilience</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Designing open-source software templates to train and advance surgeon performance for improved patient safety and healthcare outcomes.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status active">Active</div>
+      <div class="grant-agency">NIH R42 · 2021–2025</div>
+      <h4>Imaging Biomarkers of Severe Respiratory Infections in Premature Infants</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Quantitative imaging technology using non-invasive low-radiation X-ray imaging to assess respiratory disease risk in premature babies.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status completed">Completed</div>
+      <div class="grant-agency">NIH R01 · 2019–2025</div>
+      <h4>Software for Practical Annotation and Exchange of Virtual Anatomy</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Open-source platform to generate and share high-quality anatomical models with reduced expert labor and community-driven improvement over time.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status completed">Completed</div>
+      <div class="grant-agency">NIH R42 · 2020–2024</div>
+      <h4>Enhanced Software Tools for Detecting Anatomical Differences in Image Data Sets</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Image-based morphometric analysis using optimal transport methods to discover regional tissue changes without fine-grained segmentations.</p>
+    </div>
+
+    <div class="grant-card">
+      <div class="grant-status completed">Completed</div>
+      <div class="grant-agency">NIH R44 · 2017–2023</div>
+      <h4>Advanced Virtual Simulator for Ultrasound-Guided Renal Biopsy Training</h4>
+      <div class="grant-role">Principal Investigator</div>
+      <p>Virtual simulator achieving >4.4/5 effectiveness ratings from clinical experts for improving procedural skill competence in real-time ultrasound-guided renal biopsy.</p>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <p style="font-size: 0.88rem; color: var(--ink-muted);">Showing 8 of 20+ grants. Additional completed projects include neurosurgery simulation, PET/CT calibration, craniosynostosis planning, laparoscopic surgery training, orthognathic surgery guidance, and more.</p>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Publications -->
+<section id="publications">
+  <div class="section-label">Publications</div>
+  <div class="section-title">90+ Publications</div>
+  <div class="section-desc">Spanning books, peer-reviewed journals, conference proceedings, and technical reports across two decades of research.</div>
+
+  <div class="pub-summary">
+    <div class="pub-stat-card">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Books & Chapters</div>
+    </div>
+    <div class="pub-stat-card">
+      <div class="stat-num">23</div>
+      <div class="stat-label">Journal Articles</div>
+    </div>
+    <div class="pub-stat-card">
+      <div class="stat-num">65</div>
+      <div class="stat-label">Conference Papers</div>
+    </div>
+    <div class="pub-stat-card">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Technical Reports</div>
+    </div>
+  </div>
+
+  <!-- Books -->
+  <div class="collapsible-header" onclick="toggleSection(this)">
+    <h4>Books & Book Chapters</h4>
+    <span class="toggle-icon">+</span>
+  </div>
+  <div class="collapsible-content">
+    <ul class="pub-list">
+      <li><span class="pub-year">2012</span> — <span class="pub-title">"Tetrahedral Image-To-Mesh Conversion Approaches for Surgery Simulation and Navigation"</span> in Image-Based Geometric Modeling and Mesh Generation, Springer. Chernikov et al.</li>
+      <li><span class="pub-year">2009</span> — <span class="pub-title">"IGSTK: The Book"</span>, Signature Book Printing. Cleary, Cheng, Enquobahrie, Yaniv.</li>
+      <li><span class="pub-year">2005</span> — <span class="pub-title">"New Directions in Spiral CT Image Processing and Computer-Aided Diagnosis"</span> in IASLC Textbook of Prevention and Detection of Early Lung Cancer, Taylor & Francis. Reeves, Enquobahrie.</li>
+    </ul>
+  </div>
+
+  <!-- Selected Journals -->
+  <div class="collapsible-header" onclick="toggleSection(this)">
+    <h4>Selected Journal Articles (23 total)</h4>
+    <span class="toggle-icon">+</span>
+  </div>
+  <div class="collapsible-content">
+    <ul class="pub-list">
+      <li><span class="pub-year">2024</span> — <span class="pub-title">"Focused Active Learning for Histopathological Image Classification"</span> <span class="pub-venue">Medical Image Analysis</span>, Vol. 95</li>
+      <li><span class="pub-year">2023</span> — <span class="pub-title">"Optimal Transport Features for Morphometric Population Analysis"</span> <span class="pub-venue">Medical Image Analysis</span>, Vol. 84</li>
+      <li><span class="pub-year">2021</span> — <span class="pub-title">"Toward Automatic Atlas-Based Surgical Planning for Septoplasty"</span> <span class="pub-venue">IJCARS</span></li>
+      <li><span class="pub-year">2020</span> — <span class="pub-title">"Automated Measurement of Intracranial Volume Using 3D Photography"</span> <span class="pub-venue">Plastic and Reconstructive Surgery</span></li>
+      <li><span class="pub-year">2019</span> — <span class="pub-title">"PET/CT-Guided Biopsy with Respiratory Motion Correction"</span> <span class="pub-venue">IJCARS</span></li>
+      <li><span class="pub-year">2019</span> — <span class="pub-title">"Pulse Physiology Engine: Open-Source Computational Modeling"</span> <span class="pub-venue">SN Comprehensive Clinical Medicine</span></li>
+      <li><span class="pub-year">2018</span> — <span class="pub-title">"Locally Affine Diffeomorphic Surface Registration for Surgical Planning"</span> <span class="pub-venue">IEEE Trans. Medical Imaging</span></li>
+      <li><span class="pub-year">2013</span> — <span class="pub-title">"Unscented Kalman Filter Based Sensor Fusion for Surgical Navigation"</span> <span class="pub-venue">IEEE Trans. Instrumentation and Measurement</span></li>
+      <li><span class="pub-year">2011</span> — <span class="pub-title">"Agile Methods for Open-Source Safety-Critical Software"</span> <span class="pub-venue">Software: Practice and Experience</span></li>
+      <li><span class="pub-year">2008</span> — <span class="pub-title">"Designing Tracking Software for Image-Guided Surgery: IGSTK Experience"</span> <span class="pub-venue">IJCARS</span></li>
+      <li><span class="pub-year">2007</span> — <span class="pub-title">"The Image-Guided Surgery Toolkit IGSTK"</span> <span class="pub-venue">Journal of Digital Imaging</span> — <strong>Best Paper, 2nd Place</strong></li>
+      <li><span class="pub-year">2007</span> — <span class="pub-title">"Automated Detection of Small Solid Pulmonary Nodules in Whole Lung CT Scans"</span> <span class="pub-venue">Academic Radiology</span></li>
+    </ul>
+  </div>
+
+  <!-- Selected Conference Papers -->
+  <div class="collapsible-header" onclick="toggleSection(this)">
+    <h4>Selected Conference Papers (65 total)</h4>
+    <span class="toggle-icon">+</span>
+  </div>
+  <div class="collapsible-content">
+    <ul class="pub-list">
+      <li><span class="pub-year">2023</span> — <span class="pub-title">"Harmonization Benchmarking Tool for Neuroimaging Datasets"</span> <span class="pub-venue">IEEE ISBI</span></li>
+      <li><span class="pub-year">2023</span> — <span class="pub-title">"Integrated Virtual Surgical Planning System for Nasal Airway Obstruction"</span> <span class="pub-venue">IEEE ISBI</span></li>
+      <li><span class="pub-year">2020</span> — <span class="pub-title">"Inferring Continuous Treatment Doses via Model-Based Entropy-Regularized RL"</span> <span class="pub-venue">ACML (PMLR)</span></li>
+      <li><span class="pub-year">2019</span> — <span class="pub-title">"XAI-CBIR: Explainable AI for Content-Based Retrieval of Surgical Videos"</span> <span class="pub-venue">IEEE ISBI</span> — <strong>Outstanding Paper Award</strong></li>
+      <li><span class="pub-year">2019</span> — <span class="pub-title">"Active Learning for Multimodal Brain Tumor Segmentation"</span> <span class="pub-venue">MICCAI DART</span></li>
+      <li><span class="pub-year">2019</span> — <span class="pub-title">"Development and Face Validation of Ultrasound-Guided Renal Biopsy Virtual Trainer"</span> <span class="pub-venue">MICCAI</span></li>
+      <li><span class="pub-year">2017</span> — <span class="pub-title">"Locally Affine Diffeomorphic Surface Registration for Craniosynostosis Surgery"</span> <span class="pub-venue">MICCAI</span></li>
+      <li><span class="pub-year">2015</span> — <span class="pub-title">"Interactive Continuous Collision Detection Using Dynamic Clustering"</span> <span class="pub-venue">ACM SIGGRAPH i3D</span></li>
+      <li><span class="pub-year">2012</span> — <span class="pub-title">"Robot-Assisted Prostate Surgery Using AR with Deformable Models"</span> <span class="pub-venue">MICCAI Workshop</span></li>
+      <li><span class="pub-year">2004</span> — <span class="pub-title">"Automated Detection of Pulmonary Nodules from Whole Lung CT Scans"</span> <span class="pub-venue">SPIE Medical Imaging</span></li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 1.5rem;">
+    <a href="https://scholar.google.com/citations?user=_HYmgfsAAAAJ&hl" target="_blank" style="font-size: 0.88rem; color: var(--accent); text-decoration: none; font-weight: 500;">View full publication list on Google Scholar →</a>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Talks & Teaching -->
+<section id="talks">
+  <div class="section-label">Talks & Teaching</div>
+  <div class="section-title">Keynotes, Lectures & Workshops</div>
+  <div class="section-desc">24+ invited presentations at leading institutions and conferences worldwide.</div>
+
+  <ul class="talks-list">
+    <li>
+      <div class="talk-year">2025</div>
+      <div>
+        <div class="talk-title">"From Prototype to Product: Accelerating Clinical Translation with Open-Source Software"</div>
+        <div class="talk-venue">Hamlyn Symposium, London, England</div>
+        <div class="talk-type">Keynote</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2024</div>
+      <div>
+        <div class="talk-title">"Conducting Reproducible Research in Medical Image Computing"</div>
+        <div class="talk-venue">UNC Chapel Hill — STOR 674</div>
+        <div class="talk-type">Guest Lecture</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2024</div>
+      <div>
+        <div class="talk-title">"Transformative Academic-Industry Collaborations: ITK, 3D Slicer, and MONAI"</div>
+        <div class="talk-venue">Wake Forest AI Research Colloquium</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2024</div>
+      <div>
+        <div class="talk-title">"Accelerating Neuroimaging Research through Industry-Academic Collaboration"</div>
+        <div class="talk-venue">NeuroConnect 2024 Workshop</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2024</div>
+      <div>
+        <div class="talk-title">"From Canny Edge Detector to Generative AI: The Evolution of Medical Image Analysis"</div>
+        <div class="talk-venue">Frank Reidy Research Center, Norfolk, VA</div>
+        <div class="talk-type">Seminar</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2022</div>
+      <div>
+        <div class="talk-title">"Bridging Classical Medical Image Analysis with Modern Deep Learning Frameworks"</div>
+        <div class="talk-venue">Yale University — Image Analysis Seminar</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2021</div>
+      <div>
+        <div class="talk-title">"Accelerating Computer-Assisted Intervention Research using Open-Source Platforms"</div>
+        <div class="talk-venue">Johns Hopkins University — LCSR Seminar</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2019</div>
+      <div>
+        <div class="talk-title">"Accelerating Biomedical Research Using Open-Source Platforms for More Than 20 Years"</div>
+        <div class="talk-venue">Cleveland Clinic</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2015</div>
+      <div>
+        <div class="talk-title">"Enhancing Medical Image Analysis Research Using Open-Source Platforms"</div>
+        <div class="talk-venue">Dartmouth University — Thayer School of Engineering</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2013</div>
+      <div>
+        <div class="talk-title">"Role of Open-Source Software in Virtual Surgery"</div>
+        <div class="talk-venue">IDEAS Symposium, Beth Israel Deaconess Medical Center, Boston</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+    <li>
+      <div class="talk-year">2013</div>
+      <div>
+        <div class="talk-title">"Image Guided Interventions and Medical Robotics"</div>
+        <div class="talk-venue">Addis Ababa Institute of Technology, Ethiopia</div>
+        <div class="talk-type">Invited Talk</div>
+      </div>
+    </li>
+  </ul>
+
+  <div style="margin-top: 2rem;">
+    <div class="section-label">Teaching</div>
+    <div style="margin-top: 0.5rem;">
+      <p style="font-size: 0.92rem; color: var(--ink-light); line-height: 1.7;"><strong>Adjunct Assistant Professor, Old Dominion University</strong> (2024–) — Guest lectures on Deep Learning for Medical Image Analysis (MSIM/BME 462/562, MSIM 762/862)</p>
+      <p style="font-size: 0.92rem; color: var(--ink-light); line-height: 1.7; margin-top: 0.5rem;"><strong>Course Instructor, NC A&T State University</strong> (2016) — BMEN 311: Biomedical Imaging and Devices</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <div class="section-label">Workshop Organizer</div>
+    <div style="margin-top: 0.5rem;">
+      <p style="font-size: 0.92rem; color: var(--ink-light); line-height: 1.7;">MICCAI Systems & Architectures for CAI Workshop (2009–2013, 5 editions) · MICCAI Medical Device Software Tutorial (2023) · NCI-ISBI Segmentation Challenge (2013) · CARS Open-Source Workshops (2008–2009)</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Blog / Writing -->
+<section id="writing">
+  <div class="section-label">Writing</div>
+  <div class="section-title">Technical Blog Posts</div>
+  <div class="section-desc">Selected posts from 20+ articles published on the Kitware engineering blog.</div>
+
+  <div class="blog-grid">
+    <a class="blog-card" href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank">
+      <div class="blog-date">March 2025</div>
+      <h4>How Synthetic X-rays are Advancing Medical Imaging AI</h4>
+      <p>On X-ray Genius: generating synthetic X-rays (DRRs) from CT scans for surgical planning, data augmentation, and AI training.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank">
+      <div class="blog-date">February 2025</div>
+      <h4>Visualizing DICOM Images in VolView via Google Cloud Healthcare</h4>
+      <p>Connecting cloud-native DICOM storage to browser-based medical image visualization.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank">
+      <div class="blog-date">February 2025</div>
+      <h4>Orchestrating Medical Imaging Workflows: A Dagster-Based Approach</h4>
+      <p>Data pipeline orchestration for population-scale osteoarthritis imaging studies.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank">
+      <div class="blog-date">August 2024</div>
+      <h4>Beyond Open Source Software Customization: Kitware's Holistic Approach</h4>
+      <p>On building complete medical software products — from customization to regulatory compliance.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank">
+      <div class="blog-date">April 2024</div>
+      <h4>Bringing Cutting-Edge Visualization to NVIDIA Holoscan</h4>
+      <p>Integrating VTK visualization capabilities with NVIDIA's real-time AI sensor processing platform.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank">
+      <div class="blog-date">November 2023</div>
+      <h4>Developing Custom 3D Medical Image Segmentation Solutions Using MONAI</h4>
+      <p>Using NVIDIA's Medical Open Network for AI to build production segmentation pipelines.</p>
+    </a>
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank" style="font-size: 0.88rem; color: var(--accent); text-decoration: none; font-weight: 500;">View all blog posts on Kitware →</a>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<!-- Education & Credentials -->
+<section id="education">
+  <div class="section-label">Education & Credentials</div>
+  <div class="section-title">Academic Foundation</div>
+
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-degree">Ph.D., Electrical & Computer Engineering</div>
+      <div class="edu-school">Cornell University</div>
+      <div class="edu-year">2007 · Minor: Computer Science</div>
+      <div class="edu-focus">Focus: Medical Image Analysis and Computer-Aided Diagnosis. Thesis: "Automated detection of pulmonary nodules from whole lung CT scans."</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">MBA, Business Administration</div>
+      <div class="edu-school">NC State University</div>
+      <div class="edu-year">2014</div>
+      <div class="edu-focus">Focus: Product Development, Technology Evaluation, and Commercialization.</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">M.S., Geodetic Science & Surveying</div>
+      <div class="edu-school">Ohio State University</div>
+      <div class="edu-year">2000</div>
+      <div class="edu-focus">Focus: Digital photogrammetry and computer vision. Thesis: "Automatic recognition of road signs from color images."</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">B.S., Electrical Engineering</div>
+      <div class="edu-school">Addis Ababa University, Ethiopia</div>
+      <div class="edu-year">1997</div>
+      <div class="edu-focus">Focus: Computer Engineering.</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 2.5rem;">Certifications & Awards</div>
+  <div class="certs-row">
+    <span class="cert-badge">AWS Certified Cloud Practitioner</span>
+    <span class="cert-badge">Project Management Professional (PMP)</span>
+    <span class="cert-badge">Certified Agile Professional</span>
+    <span class="cert-badge">Lean Six Sigma Yellow Belt</span>
+    <span class="cert-badge">Tibbetts Award (IGSTK, 2011)</span>
+    <span class="cert-badge">MICCAI Outstanding Paper Award (2019)</span>
+    <span class="cert-badge">JDI Best Paper, 2nd Place (2007)</span>
+  </div>
+
+  <div class="section-label" style="margin-top: 2.5rem;">Technical Skills</div>
+  <div class="certs-row">
+    <span class="cert-badge">Python</span>
+    <span class="cert-badge">C++</span>
+    <span class="cert-badge">PyTorch</span>
+    <span class="cert-badge">MONAI</span>
+    <span class="cert-badge">LangChain / LangGraph</span>
+    <span class="cert-badge">RAG Pipelines</span>
+    <span class="cert-badge">Docker</span>
+    <span class="cert-badge">Terraform</span>
+    <span class="cert-badge">AWS</span>
+    <span class="cert-badge">GitHub Actions / CI-CD</span>
+    <span class="cert-badge">Prometheus / Grafana</span>
+    <span class="cert-badge">ITK / VTK / 3D Slicer</span>
+    <span class="cert-badge">SciPy / Scikit-Learn / Pandas</span>
+    <span class="cert-badge">NVIDIA Clara</span>
+    <span class="cert-badge">ChromaDB</span>
+  </div>
+</section>
+
+<!-- Contact -->
+<div class="contact-section" id="contact">
+  <h2>Let's Connect</h2>
+  <p>I'm always interested in conversations about AI engineering, agentic systems, and operationalizing technology at scale.</p>
+  <div class="contact-links">
+    <a href="mailto:andinet@gmail.com">✉ Email</a>
+    <a href="https://www.linkedin.com/in/andinet/" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=_HYmgfsAAAAJ&hl" target="_blank">Google Scholar</a>
+    <a href="https://www.kitware.com/andinet-enquobahrie/" target="_blank">Kitware Profile</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Andinet Asmamaw Enquobahrie. Built with care.</p>
+</footer>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Mobile menu
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// Collapsible sections
+function toggleSection(header) {
+  header.classList.toggle('open');
+  const content = header.nextElementSibling;
+  content.classList.toggle('open');
+}
+
+// Smooth scroll offset for fixed nav
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 70,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

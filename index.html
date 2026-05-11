@@ -888,12 +888,12 @@ footer p {
     <a href="#" class="nav-name">A. A. Enquobahrie</a>
     <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
+      <a href="#writing">Writing</a>
       <a href="#journey">Journey</a>
       <a href="#projects">Projects</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#talks">Talks</a>
-      <a href="#writing">Writing</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
@@ -1058,6 +1058,62 @@ footer p {
 
 <div class="divider"><hr></div>
 
+<!-- Blog / Writing -->
+<section id="writing">
+  <div class="section-label">Writing</div>
+  <div class="section-title">Technical Blog Posts</div>
+  <div class="section-desc">Recent writing on AI, medical software, and engineering — across my personal blog and 20+ articles on the Kitware engineering blog.</div>
+
+  <div class="blog-grid">
+    <a class="blog-card" href="https://blog.andinet.dev/agentic-ai-is-coming-to-the-samd-lifecycle" target="_blank">
+      <div class="blog-date">May 2026</div>
+      <h4>Agentic AI Is Coming to the SaMD Lifecycle</h4>
+      <p>How autonomous AI agents can augment Software as a Medical Device development across the six phases of the IEC 62304 lifecycle, and why guardrail architecture is the core engineering challenge.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/system-architecture-for-cloud-based-medical-image-analysis/" target="_blank">
+      <div class="blog-date">February 2026</div>
+      <h4>System Architecture for Cloud-Based Medical Image Analysis</h4>
+      <p>Architectural patterns for building production medical image analysis systems using asynchronous queue-based approaches for large DICOM files.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/how-synthetic-x-rays-are-advancing-medical-imaging-ai/" target="_blank">
+      <div class="blog-date">March 2025</div>
+      <h4>How Synthetic X-rays are Advancing Medical Imaging AI</h4>
+      <p>On X-ray Genius: generating synthetic X-rays (DRRs) from CT scans for surgical planning, data augmentation, and AI training.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/visualizing-dicom-images-in-volview-via-google-cloud-healthcare/" target="_blank">
+      <div class="blog-date">February 2025</div>
+      <h4>Visualizing DICOM Images in VolView via Google Cloud Healthcare</h4>
+      <p>Connecting cloud-native DICOM storage to browser-based medical image visualization.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/orchestrating-medical-imaging-workflows-a-dagster-based-approach-for-population-studies-in-osteoarthritis/" target="_blank">
+      <div class="blog-date">February 2025</div>
+      <h4>Orchestrating Medical Imaging Workflows: A Dagster-Based Approach</h4>
+      <p>Data pipeline orchestration for population-scale osteoarthritis imaging studies.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/beyond-open-source-software-customization-kitwares-holistic-approach-to-medical-software-product-development/" target="_blank">
+      <div class="blog-date">August 2024</div>
+      <h4>Beyond Open Source Software Customization: Kitware's Holistic Approach</h4>
+      <p>On building complete medical software products, from customization to regulatory compliance.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/bringing-cutting-edge-visualization-to-nvidia-holoscan/" target="_blank">
+      <div class="blog-date">April 2024</div>
+      <h4>Bringing Cutting-Edge Visualization to NVIDIA Holoscan</h4>
+      <p>Integrating VTK visualization capabilities with NVIDIA's real-time AI sensor processing platform.</p>
+    </a>
+    <a class="blog-card" href="https://www.kitware.com/developing-custom-3d-medical-image-segmentation-solutions-using-out-of-the-box-pipelines-in-monai/" target="_blank">
+      <div class="blog-date">November 2023</div>
+      <h4>Developing Custom 3D Medical Image Segmentation Solutions Using MONAI</h4>
+      <p>Using NVIDIA's Medical Open Network for AI to build production segmentation pipelines.</p>
+    </a>
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank" style="font-size: 0.88rem; color: var(--accent); text-decoration: none; font-weight: 500;">View all blog posts on Kitware →</a>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
 <!-- Career Journey Timeline -->
 <section id="journey">
   <div class="section-label">Career Journey</div>
@@ -1149,18 +1205,8 @@ footer p {
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="project-icon agent">🤖</div>
-      <h4>HeartSight AI</h4>
-      <div class="project-sub">ARPA-H · 2024–2027 · Principal Investigator</div>
-      <p>Autonomous AI-guided ultrasound system for neonatal congenital heart disease screening. Integrates mechatronic robotics, embedded firmware (ESP32), mobile diagnostics, and deep learning–based image interpretation. A compound agentic system with autonomous decision-making, sensor integration, and real-time inference.</p>
-      <div class="tech-tags">
-        <span>PyTorch</span><span>Embedded AI</span><span>Robotics</span><span>ESP32</span><span>Deep Learning</span><span>Mobile</span>
-      </div>
-    </div>
-
-    <div class="project-card">
       <div class="project-icon rag">📚</div>
-      <h4>MedExRAG</h4>
+      <h4><a href="https://github.com/andinet/MedExRAG" target="_blank">MedExRAG</a></h4>
       <div class="project-sub">Evidence-Based AI for Radiology</div>
       <p>Retrieval-augmented generation system for X-ray interpretation using Qwen2-VL multimodal vision-language model. Full agentic pipeline with PubMedBERT embeddings, ChromaDB semantic search, DocLing OCR parsing, LangChain/LangGraph orchestration, and GPU-enabled Docker deployment with Prometheus/Grafana observability.</p>
       <div class="tech-tags">
@@ -1559,57 +1605,6 @@ footer p {
     <div style="margin-top: 0.5rem;">
       <p style="font-size: 0.92rem; color: var(--ink-light); line-height: 1.7;">MICCAI Systems & Architectures for CAI Workshop (2009–2013, 5 editions) · MICCAI Medical Device Software Tutorial (2023) · NCI-ISBI Segmentation Challenge (2013) · CARS Open-Source Workshops (2008–2009)</p>
     </div>
-  </div>
-</section>
-
-<div class="divider"><hr></div>
-
-<!-- Blog / Writing -->
-<section id="writing">
-  <div class="section-label">Writing</div>
-  <div class="section-title">Technical Blog Posts</div>
-  <div class="section-desc">Selected posts from 20+ articles published on the Kitware engineering blog.</div>
-
-  <div class="blog-grid">
-    <a class="blog-card" href="https://www.kitware.com/system-architecture-for-cloud-based-medical-image-analysis/" target="_blank">
-      <div class="blog-date">February 2026</div>
-      <h4>System Architecture for Cloud-Based Medical Image Analysis</h4>
-      <p>Architectural patterns for building production medical image analysis systems using asynchronous queue-based approaches for large DICOM files.</p>
-    </a>
-    <a class="blog-card" href="https://www.kitware.com/how-synthetic-x-rays-are-advancing-medical-imaging-ai/" target="_blank">
-      <div class="blog-date">March 2025</div>
-      <h4>How Synthetic X-rays are Advancing Medical Imaging AI</h4>
-      <p>On X-ray Genius: generating synthetic X-rays (DRRs) from CT scans for surgical planning, data augmentation, and AI training.</p>
-    </a>
-    <a class="blog-card" href="https://www.kitware.com/visualizing-dicom-images-in-volview-via-google-cloud-healthcare/" target="_blank">
-      <div class="blog-date">February 2025</div>
-      <h4>Visualizing DICOM Images in VolView via Google Cloud Healthcare</h4>
-      <p>Connecting cloud-native DICOM storage to browser-based medical image visualization.</p>
-    </a>
-    <a class="blog-card" href="https://www.kitware.com/orchestrating-medical-imaging-workflows-a-dagster-based-approach-for-population-studies-in-osteoarthritis/" target="_blank">
-      <div class="blog-date">February 2025</div>
-      <h4>Orchestrating Medical Imaging Workflows: A Dagster-Based Approach</h4>
-      <p>Data pipeline orchestration for population-scale osteoarthritis imaging studies.</p>
-    </a>
-    <a class="blog-card" href="https://www.kitware.com/beyond-open-source-software-customization-kitwares-holistic-approach-to-medical-software-product-development/" target="_blank">
-      <div class="blog-date">August 2024</div>
-      <h4>Beyond Open Source Software Customization: Kitware's Holistic Approach</h4>
-      <p>On building complete medical software products, from customization to regulatory compliance.</p>
-    </a>
-    <a class="blog-card" href="https://www.kitware.com/bringing-cutting-edge-visualization-to-nvidia-holoscan/" target="_blank">
-      <div class="blog-date">April 2024</div>
-      <h4>Bringing Cutting-Edge Visualization to NVIDIA Holoscan</h4>
-      <p>Integrating VTK visualization capabilities with NVIDIA's real-time AI sensor processing platform.</p>
-    </a>
-    <a class="blog-card" href="https://www.kitware.com/developing-custom-3d-medical-image-segmentation-solutions-using-out-of-the-box-pipelines-in-monai/" target="_blank">
-      <div class="blog-date">November 2023</div>
-      <h4>Developing Custom 3D Medical Image Segmentation Solutions Using MONAI</h4>
-      <p>Using NVIDIA's Medical Open Network for AI to build production segmentation pipelines.</p>
-    </a>
-  </div>
-
-  <div style="text-align: center; margin-top: 1.5rem;">
-    <a href="https://www.kitware.com/author/andinet-enquobahrie/" target="_blank" style="font-size: 0.88rem; color: var(--accent); text-decoration: none; font-weight: 500;">View all blog posts on Kitware →</a>
   </div>
 </section>
 
